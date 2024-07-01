@@ -18,7 +18,7 @@ data_5a <- data.frame(element = factor(c('Full model', 'Full model with interact
                                              )),
                       coefficient = c(.51,.85,.58,.26,.39))
 
-pdf(here('./figs/gmur_R2_drop_5a_new.pdf'))
+pdf(here('./figs/5A_raw.pdf'))
 ggbarplot(data_5a, x = 'element', y = 'coefficient', orientation = 'horiz',
           fill = 'grey', color = 'grey', label = TRUE) +
   rremove('ylab')  +
@@ -30,9 +30,9 @@ data_5c <- read_tsv(here('./data/prem_cl/gmur_prem_cl_4_fig5c.tsv.gz')) %>%
   mutate(signal = factor(signal, levels = c('AGUAAA', 'UGUAAA', 'AGUGAA')),
          prem_cl = factor(prem_cl))
 
-pdf(here('./figs/gmur_prem_cl_5c_new.pdf'))
+pdf(here('./figs/5C.pdf'))
 ggbarplot(data_5c, x = 'signal', y = 'counts', 
-          fill = 'prem_cl', palette = c('black', 'grey'),
+          fill = 'prem_cl', palette = c('red', 'gray'),
           position = position_dodge()) +
   theme(text = element_text(size = 14))+
   theme(legend.position = 'right') +
