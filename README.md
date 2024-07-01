@@ -1,1 +1,2 @@
 # 2024_protists_polyA
+Repository contains data and scripts from the "Evolutionary dynamics of polyadenylation signals and their recognition strategies in protists" by Marcin P. Sajek, Danielle Bilodeau, Michael A. Beer, Emma Horton, Yukiko Miyamoto, Katrina B. Velle, Lars Eckmann, Lilian Fritz-Laylin, Olivia S. Rissland and Neelanjan Mukherjee. If you have any questions about data/code please email marcin.sajek@cuanschutz.edu or marcin.sajek@gmail.com.
