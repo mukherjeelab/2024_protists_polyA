@@ -34,9 +34,9 @@ pa_df <- rbind(hs, ent, neg, trif, trich, glamb, gsm, gmur) %>%
          polyA_signals = factor(polyA_signals, levels = c('AGUAAA', 'UGUAAA', 'AGUGAA', 'AAUUGA', 'AAUUAA', 'UUAAUU', 'AUUAAA', 'AAUAAA')),
          dataset = factor(dataset, levels = c('H. sapiens','E. histolitica', 'N. gruberi', 'T. foetus', 'T. vaginalis', 'G. lamblia', 'G. lamblia B-GS', 'G. muris')))
 
-pdf(here('./figs/pA_signals_freq.pdf'), width = 14, height = 5)
+pdf(here('./figs/1C_raw.pdf'), width = 14, height = 5)
 ggbarplot(pa_df, x = 'polyA_signals', y = 'frequency', color = 'black', fill = 'color',
-          palette = c('red', 'blue', 'black'), orientation = 'horizontal', facet.by = 'dataset',
+          palette = c('#0071bcff', '#00a875ff', 'black'), orientation = 'horizontal', facet.by = 'dataset',
           nrow = 1) +
   rremove('ylab') +
   rremove('legend') +
@@ -305,8 +305,8 @@ motif_dist <- rbind(hs_motif, eh_motif, ng_motif, tf_motif, tv_motif, gl_motif, 
                                    TRUE ~ 'other'), levels = c('AWUAAA', 'AGURAA', 'other')),
          min_dist = -min_dist)
 
-pdf(here('./figs/cl_site_distance.pdf'), width = 12, height = 3)
-ggdensity(motif_dist, x = 'min_dist', color = 'signal', palette = c('blue', 'red', 'black'),
+pdf(here('./figs/1D_raw.pdf'), width = 12, height = 3)
+ggdensity(motif_dist, x = 'min_dist', color = 'signal', palette = c('#00a875ff','#0071bcff', 'black'),
           facet.by = 'dataset', nrow = 1, xlab = 'distance from cleavage site') +
   xlim(c(-40,0)) +
   theme(legend.position="right") +
