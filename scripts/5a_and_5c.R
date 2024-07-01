@@ -30,7 +30,7 @@ data_5c <- read_tsv(here('./data/prem_cl/gmur_prem_cl_4_fig5c.tsv.gz')) %>%
   mutate(signal = factor(signal, levels = c('AGUAAA', 'UGUAAA', 'AGUGAA')),
          prem_cl = factor(prem_cl))
 
-pdf(here('./figs/5C.pdf'))
+pdf(here('./figs/5C_raw.pdf'))
 ggbarplot(data_5c, x = 'signal', y = 'counts', 
           fill = 'prem_cl', palette = c('red', 'gray'),
           position = position_dodge()) +
